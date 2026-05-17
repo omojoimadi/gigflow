@@ -32,38 +32,42 @@ A full-stack Lead Management Dashboard built with the MERN stack and TypeScript.
 
 ## Project Structure
 
+## Project Structure
+
+```
 gigflow/
-    ├── docker-compose.yml
+├── docker-compose.yml
+├── .env.example
+├── .gitignore
+├── README.md
+├── server/                   # Node.js + Express backend
+│   ├── src/
+│   │   ├── config/           # Database connection
+│   │   ├── controllers/      # Business logic
+│   │   ├── middleware/       # Auth and error handling
+│   │   ├── models/           # Mongoose schemas
+│   │   ├── routes/           # API endpoints
+│   │   ├── types/            # TypeScript interfaces
+│   │   ├── utils/            # Helper functions
+│   │   └── app.ts            # Express app entry point
+│   ├── .env.example
+│   ├── package.json
+│   └── tsconfig.json
+└── client/                   # React frontend
+    ├── src/
+    │   ├── components/
+    │   │   ├── auth/         # Login and Register forms
+    │   │   ├── layout/       # Navbar
+    │   │   ├── leads/        # Lead components
+    │   │   └── ui/           # Reusable UI components
+    │   ├── context/          # Global auth state
+    │   ├── hooks/            # Custom hooks (useDebounce)
+    │   ├── pages/            # Auth and Dashboard pages
+    │   ├── services/         # API call functions
+    │   └── types/            # TypeScript interfaces
     ├── .env.example
-    ├── .gitignore
-    ├── README.md
-    ├── server/                   # Node.js + Express backend
-    │   ├── src/
-    │   │   ├── config/           # Database connection
-    │   │   ├── controllers/      # Business logic
-    │   │   ├── middleware/       # Auth and error handling
-    │   │   ├── models/           # Mongoose schemas
-    │   │   ├── routes/           # API endpoints
-    │   │   ├── types/            # TypeScript interfaces
-    │   │   ├── utils/            # Helper functions
-    │   │   └── app.ts            # Express app entry point
-    │   ├── .env.example
-    │   ├── package.json
-    │   └── tsconfig.json
-    └── client/                   # React frontend
-        ├── src/
-        │   ├── components/
-        │   │   ├── auth/         # Login and Register forms
-        │   │   ├── layout/       # Navbar
-        │   │   ├── leads/        # Lead components
-        │   │   └── ui/           # Reusable UI components
-        │   ├── context/          # Global auth state
-        │   ├── hooks/            # Custom hooks (useDebounce)
-        │   ├── pages/            # Auth and Dashboard pages
-        │   ├── services/         # API call functions
-        │   └── types/            # TypeScript interfaces
-        ├── .env.example
-        └── package.json
+    └── package.json
+```
 
 ## Local Setup
 
