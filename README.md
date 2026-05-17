@@ -32,26 +32,38 @@ A full-stack Lead Management Dashboard built with the MERN stack and TypeScript.
 
 ## Project Structure
 
-
-    gigflow/
+gigflow/
+    ├── docker-compose.yml
+    ├── .env.example
+    ├── .gitignore
+    ├── README.md
     ├── server/                   # Node.js + Express backend
-    │   └── src/
-    │       ├── config/           # Database connection
-    │       ├── controllers/      # Business logic
-    │       ├── middleware/        # Auth and error handling
-    │       ├── models/           # Mongoose schemas
-    │       ├── routes/           # API endpoints
-    │       ├── types/            # TypeScript interfaces
-    │       └── utils/            # Helper functions
+    │   ├── src/
+    │   │   ├── config/           # Database connection
+    │   │   ├── controllers/      # Business logic
+    │   │   ├── middleware/       # Auth and error handling
+    │   │   ├── models/           # Mongoose schemas
+    │   │   ├── routes/           # API endpoints
+    │   │   ├── types/            # TypeScript interfaces
+    │   │   ├── utils/            # Helper functions
+    │   │   └── app.ts            # Express app entry point
+    │   ├── .env.example
+    │   ├── package.json
+    │   └── tsconfig.json
     └── client/                   # React frontend
-        └── src/
-            ├── components/       # Reusable UI components
-            ├── context/          # Global state
-            ├── hooks/            # Custom hooks
-            ├── pages/            # Page components
-            ├── services/         # API calls
-            └── types/            # TypeScript interfaces
-
+        ├── src/
+        │   ├── components/
+        │   │   ├── auth/         # Login and Register forms
+        │   │   ├── layout/       # Navbar
+        │   │   ├── leads/        # Lead components
+        │   │   └── ui/           # Reusable UI components
+        │   ├── context/          # Global auth state
+        │   ├── hooks/            # Custom hooks (useDebounce)
+        │   ├── pages/            # Auth and Dashboard pages
+        │   ├── services/         # API call functions
+        │   └── types/            # TypeScript interfaces
+        ├── .env.example
+        └── package.json
 
 ## Local Setup
 
