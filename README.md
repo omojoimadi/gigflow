@@ -27,28 +27,31 @@ A full-stack Lead Management Dashboard built with the MERN stack and TypeScript.
 - Backend Pagination (10 records per page)
 - CSV Export
 - Responsive UI with Loading, Empty and Error States
+- Dark Mode Support
 - Docker Setup
 
 ## Project Structure
 
-gigflow/
-├── server/          # Node.js + Express backend
-│   └── src/
-│       ├── config/         # Database connection
-│       ├── controllers/    # Business logic
-│       ├── middleware/      # Auth and error handling
-│       ├── models/         # Mongoose schemas
-│       ├── routes/         # API endpoints
-│       ├── types/          # TypeScript interfaces
-│       └── utils/          # Helper functions
-└── client/          # React frontend
-└── src/
-├── components/     # Reusable UI components
-├── context/        # Global state
-├── hooks/          # Custom hooks
-├── pages/          # Page components
-├── services/       # API calls
-└── types/          # TypeScript interfaces
+
+    gigflow/
+    ├── server/                   # Node.js + Express backend
+    │   └── src/
+    │       ├── config/           # Database connection
+    │       ├── controllers/      # Business logic
+    │       ├── middleware/        # Auth and error handling
+    │       ├── models/           # Mongoose schemas
+    │       ├── routes/           # API endpoints
+    │       ├── types/            # TypeScript interfaces
+    │       └── utils/            # Helper functions
+    └── client/                   # React frontend
+        └── src/
+            ├── components/       # Reusable UI components
+            ├── context/          # Global state
+            ├── hooks/            # Custom hooks
+            ├── pages/            # Page components
+            ├── services/         # API calls
+            └── types/            # TypeScript interfaces
+
 
 ## Local Setup
 
@@ -85,6 +88,7 @@ docker-compose up --build
 ## API Endpoints
 
 ### Auth
+
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | POST | /api/auth/register | Register a new user |
@@ -92,6 +96,7 @@ docker-compose up --build
 | GET | /api/auth/me | Get current user |
 
 ### Leads
+
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | /api/leads | Get all leads with filters |
@@ -103,17 +108,30 @@ docker-compose up --build
 
 ## Environment Variables
 
+```env
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret
 PORT=5000
 NODE_ENV=development
+```
 
 ## Role Based Access Control
 
 | Feature | Admin | Sales User |
 |---------|-------|------------|
-| Create Lead | ✅ | ✅ |
-| View Leads | ✅ | ✅ |
-| Update Lead | ✅ | Own leads only |
-| Delete Lead | ✅ | ❌ |
-| Export CSV | ✅ | ✅ |
+| Create Lead | Yes | Yes |
+| View Leads | Yes | Yes |
+| Update Lead | Yes | Own leads only |
+| Delete Lead | Yes | No |
+| Export CSV | Yes | Yes |
+
+## Live Demo
+
+- Frontend: https://gigflow-navy-rho.vercel.app
+- Backend: https://gigflow-server-ojaq.onrender.com
+
+## Deployment
+
+- Frontend deployed on Vercel
+- Backend deployed on Render
+- Database hosted on MongoDB Atlas

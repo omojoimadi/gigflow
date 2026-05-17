@@ -14,14 +14,14 @@ const Pagination: React.FC<Props> = ({ pagination, onPageChange }) => {
 
   return (
     <div className="flex items-center justify-between mt-4">
-      <p className="text-sm text-gray-500">
+      <p className="text-sm text-gray-500 dark:text-gray-400">
         Showing {(page - 1) * limit + 1} to {Math.min(page * limit, total)} of {total} leads
       </p>
       <div className="flex items-center space-x-2">
         <button
           onClick={() => onPageChange(page - 1)}
           disabled={page === 1}
-          className="p-2 rounded-lg border border-gray-300 text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="p-2 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <ChevronLeft size={16} />
         </button>
@@ -32,7 +32,7 @@ const Pagination: React.FC<Props> = ({ pagination, onPageChange }) => {
             className={`w-8 h-8 rounded-lg text-sm font-medium ${
               p === page
                 ? 'bg-indigo-600 text-white'
-                : 'border border-gray-300 text-gray-500 hover:bg-gray-50'
+                : 'border border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700'
             }`}
           >
             {p}
@@ -41,7 +41,7 @@ const Pagination: React.FC<Props> = ({ pagination, onPageChange }) => {
         <button
           onClick={() => onPageChange(page + 1)}
           disabled={page === totalPages}
-          className="p-2 rounded-lg border border-gray-300 text-gray-500 hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
+          className="p-2 rounded-lg border border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <ChevronRight size={16} />
         </button>

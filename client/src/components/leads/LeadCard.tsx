@@ -26,11 +26,11 @@ const LeadCard: React.FC<Props> = ({ lead, onEdit, onDelete }) => {
   const { user } = useAuth();
 
   return (
-    <div className="bg-white border border-gray-200 rounded-xl p-4 hover:shadow-md transition-shadow">
+    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-4 hover:shadow-md transition-shadow">
       <div className="flex items-start justify-between">
         <div>
-          <h3 className="font-semibold text-gray-800">{lead.name}</h3>
-          <p className="text-sm text-gray-500 mt-1">{lead.email}</p>
+          <h3 className="font-semibold text-gray-800 dark:text-white">{lead.name}</h3>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">{lead.email}</p>
         </div>
         <div className="flex space-x-2">
           <button

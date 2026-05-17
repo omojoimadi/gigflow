@@ -36,7 +36,7 @@ const LeadForm: React.FC<Props> = ({ initial, onSubmit, onCancel, loading }) => 
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
           placeholder="Lead name"
         />
       </div>
@@ -46,7 +46,7 @@ const LeadForm: React.FC<Props> = ({ initial, onSubmit, onCancel, loading }) => 
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
           placeholder="lead@example.com"
         />
       </div>
@@ -55,7 +55,7 @@ const LeadForm: React.FC<Props> = ({ initial, onSubmit, onCancel, loading }) => 
         <select
           value={status}
           onChange={(e) => setStatus(e.target.value as ILead['status'])}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
         >
           <option value="New">New</option>
           <option value="Contacted">Contacted</option>
@@ -68,7 +68,7 @@ const LeadForm: React.FC<Props> = ({ initial, onSubmit, onCancel, loading }) => 
         <select
           value={source}
           onChange={(e) => setSource(e.target.value as ILead['source'])}
-          className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          className="w-full border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"
         >
           <option value="Website">Website</option>
           <option value="Instagram">Instagram</option>
